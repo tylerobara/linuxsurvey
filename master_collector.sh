@@ -7,7 +7,7 @@ for i in "${ip[@]}"
     if [ $server = 'class20-06.ddns.net' ]
 		then 
 		ssh student@class20-06.ddns.net 'bash -s' collectspecial.sh
-		scp student@class20-06.ddns.net:/home/student/joseph.obara/sysinfospecial.sh .
+		scp student@class20-06.ddns.net:/home/student/joseph.obara/sysinfo131.sh .
 		else
         ssh student@192.39.100.$i 'bash -s' < collect$i.ssh
         scp student@192.39.100.$i:/home/student/joseph.obara/"sysinfo$i".txt .

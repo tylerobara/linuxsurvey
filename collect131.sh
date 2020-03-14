@@ -1,7 +1,8 @@
 #!/bin/bash
+mkdir -pv joseph.obara
 out="/home/student/joseph.obara/sysinfo131.txt"
 #1a - collect date
-date >> $out
+date > $out
 
 #1b - how many users are logged in
 who | wc -l >> $out
