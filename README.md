@@ -7,3 +7,6 @@ The master_collector.sh file will scp the script(s) to be run on the remote mach
 
 ``collect{x}.sh``
 The collect{x}.sh file is configured to run specific commands on the remote system based on pre-determined variables.
+
+more changes
+
