@@ -1,6 +1,7 @@
 #!/bin/bash
-mkdir -pv joseph.obara
+mkdir -pv /home/student/joseph.obara
 out="/home/student/joseph.obara/sysinfo131.txt"
+
 #1a - collect date
 date > $out
 
@@ -14,7 +15,7 @@ sudo netstat -pant >> $out
 hostname >> $out
 
 #1e - what dns servers are configuire
-sudo cat /etc/resolve.conf >> $out
+sudo cat /etc/resolv.conf >> $out
 sudo cat /etc/sysconfig/network-scripts/ifcfg-* | grep dns >> $out
 
 #1f - what scheduled tasks are configured to run
@@ -32,10 +33,9 @@ sudo cat /etc/group >> $out
 sudo cat /etc/sudoers >> $out
 
 #1j - where are the kernel logs stored
-cat /etc/rsyslog.conf | grep 'kern\|'*'' >> $out
+cat /etc/rsyslog.conf  >> $out
 
 #1k - who can alter the kernel log file
 sudo ls -lah /var/log/messages | awk -F' ' '{ print $2,$3}' >> $out
-
 
 
