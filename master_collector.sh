@@ -15,7 +15,6 @@ for i in "${ip[@]}"
         printf "SCPing the results from the $server system\n" 
 		scp student@class20-06.ddns.net:/home/student/joseph.obara/sysinfo131.txt .
         echo ST@dm1n! | ssh -tt student@class20-06.ddns.net "sudo -s rm -rf /home/student/joseph.obara/"
-
 		else
         ssh -t student@192.39.100.$i 'bash -s' < collect$i.sh
         scp student@192.39.100.$i:/home/student/joseph.obara/"sysinfo$i".txt .
