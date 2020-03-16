@@ -10,12 +10,6 @@ display_usage() {
 		display_usage
 		exit 1
 	fi 
- # check whether user had supplied -h or --help . If yes display usage 
-	#if [[ ( $# == "--help") ||  $# == "-h" ]] 
-	#then 
-		#display_usage
-		#exit 0
-	#fi 
 
 server=$1
 user_path="/home/student/$2"
