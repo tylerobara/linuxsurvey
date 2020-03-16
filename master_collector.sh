@@ -10,8 +10,7 @@ display_usage() {
 		display_usage
 		exit 1
 	fi 
- 
-# check whether user had supplied -h or --help . If yes display usage 
+ # check whether user had supplied -h or --help . If yes display usage 
 	if [[ ( $# == "--help") ||  $# == "-h" ]] 
 	then 
 		display_usage
@@ -37,6 +36,7 @@ for i in "${ip[@]}"
 		scp -q student@class20-06.ddns.net:$user_path/sysinfo_*.txt .
         echo ST@dm1n! | ssh -tt -q student@class20-06.ddns.net "sudo -s rm -rf $user_path" 2>/dev/null
 		else
+        
         ssh -t student@192.39.100.$i 'bash -s' < collect$i.sh
         scp student@192.39.100.$i:/home/student/joseph.obara/"sysinfo$i".txt .
         fi
